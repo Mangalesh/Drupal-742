@@ -1,1 +1,0 @@
-Cufon.replace('#superfish-1 a, #superfish-1 a:visited, .node h2 a, .take-tour a, section.block h2, .view-block-services .views-field-title, .panel-flexible h2, #content h1.title', { fontFamily:'MgOpen Moderna', hover:true});
