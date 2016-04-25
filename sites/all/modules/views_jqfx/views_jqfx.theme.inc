@@ -1,15 +1,13 @@
 <?php
-// $Id$
-
 /**
  * @file
- * The theme system, which controls the output of views jqfx.
+ * The theme system, which controls the output of views jQFX.
  *
- * This just adds a wrapper div to the jqfx.
+ * This just adds a wrapper div to the output.
  */
 
 /**
- * The current element of the jqfx.
+ * The current element of the output.
  *
  * @ingroup themeable
  */

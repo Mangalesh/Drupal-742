@@ -1,6 +1,4 @@
 <?php
-// $Id$
-
 /**
  * @file
  * Defines the View Style Plugins for the Views jQFX module.
@@ -13,7 +11,7 @@ function views_jqfx_views_plugins() {
   return array(
     'style' => array(
       'jqfx' => array(
-        'title' => t('jQfx'),
+        'title' => t('jQFX'),
         'help' => t('Applies jQuery effects to views output.'),
         'handler' => 'views_jqfx_plugin_style_jqfx',
         'uses options' => TRUE,

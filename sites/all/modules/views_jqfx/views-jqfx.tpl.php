@@ -1,9 +1,7 @@
 <?php
-// $Id$
-
 /**
  * @file
- * Default views template for displaying a jqfx.
+ * Default views template.
  *
  * - $view: The View object.
  * - $options: Settings for the active style.

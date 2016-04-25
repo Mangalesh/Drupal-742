@@ -60,15 +60,17 @@
  *   The sub-categories faqs, recursively themed (by this template).
  */
 
+// @todo should be moved to better place.
+// @codingStandardsIgnoreStart
 if ($category_depth > 0) {
   $hdr = 'h4';
 }
 else {
   $hdr = 'h3';
 }
-
+// @codingStandardsIgnoreEnd
 ?>
-<a name="top"></a>
+<a id="faq-top"></a>
 <div class="faq-category-menu">
 
   <!-- category header with title, link, image, description, and count of questions inside -->
@@ -115,14 +117,14 @@ else {
 
   <div class="<?php print $container_class; ?>">
 
-  <?php // include subcategories ?>
+  <?php /* Include subcategories. */ ?>
   <?php if (count($subcat_body_list)): ?>
     <?php foreach ($subcat_body_list as $i => $subcat_html): ?>
       <div class="faq-category-indent"><?php print $subcat_html; ?></div>
     <?php endforeach; ?>
   <?php endif; ?>
 
-  <?php // list question links ?>
+  <?php /* List question links. */ ?>
   <?php if (!empty($question_list)): ?>
     <div class="item-list">
     <<?php print $question_list_style; ?> class="faq-ul-questions-top">
@@ -149,23 +151,32 @@ else {
     <div class="clear-block"></div>
   <?php endif; ?>
 
-  <?php // List questions (in title link) and answers (in body). ?>
+  <?php /* List questions (in title link) and answers (in body). */ ?>
   <div class="faq-category-group">
   <div>
 
   <?php if (count($nodes)): ?>
     <?php foreach ($nodes as $i => $node): ?>
 
-      <div class="faq-question"><?php // Strong question label here? ?>
+      <div class="faq-question">
+        <?php if (!empty($question_label)) : ?>
+          <strong class="faq-question-label">
+            <?php print $question_label; ?>
+          </strong>
+        <?php endif; ?>
       <?php print $node['question']; ?>
       </div> <!-- Close div: faq-question -->
 
       <div class="faq-answer">
-      <strong><?php print $answer_label; ?></strong>
-      <?php print $node['body']; ?>
-      <?php if (isset($node['links'])): ?>
-        <?php print $node['links']; ?>
-      <?php endif; ?>
+        <?php if (!empty($answer_label)) : ?>
+          <strong class="faq-answer-label">
+            <?php print $answer_label; ?>
+          </strong>
+        <?php endif; ?>
+        <?php print $node['body']; ?>
+        <?php if (isset($node['links'])): ?>
+          <?php print $node['links']; ?>
+        <?php endif; ?>
       </div> <!-- Close div: faq-answer -->
     <?php endforeach; ?>
   <?php endif; ?>
@@ -176,5 +187,4 @@ else {
 <?php if ($group_questions_top || $category_display == 'hide_qa'): ?>
 </div> <!-- Close div: faq-qa / faq-qa-hide -->
 </div> <!-- Close div: faq-category-menu -->
-<?php
-endif;
+<?php endif; ?>

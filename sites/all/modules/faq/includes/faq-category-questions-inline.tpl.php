@@ -53,15 +53,17 @@
  *   The sub-categories faqs, recursively themed (by this template).
  */
 
+// @todo should be moved to better place.
+// @codingStandardsIgnoreStart
 if ($category_depth > 0) {
   $hdr = 'h4';
 }
 else {
   $hdr = 'h3';
 }
-
+// @codingStandardsIgnoreEnd
 ?>
-<a name="top"></a>
+<a id="faq-top"></a>
 <div class="faq-category-group">
   <!-- category header with title, link, image, description, and count of
   questions inside -->
@@ -130,20 +132,18 @@ else {
       </div> <!-- Close div: faq-question -->
 
       <div class="faq-answer">
-      <?php if (!empty($answer_label)): ?>
-        <strong class="faq-answer-label">
-        <?php print $answer_label; ?>
-        </strong>
-      <?php endif; ?>
-      <?php print $node['body']; ?>
-      <?php if (isset($node['links'])): ?>
-        <?php print $node['links']; ?>
-      <?php endif; ?>
+        <?php if (!empty($answer_label)): ?>
+          <strong class="faq-answer-label">
+            <?php print $answer_label; ?>
+          </strong>
+        <?php endif; ?>
+        <?php print $node['body']; ?>
+        <?php if (isset($node['links'])): ?>
+          <?php print $node['links']; ?>
+        <?php endif; ?>
       </div> <!-- Close div: faq-answer -->
     <?php endforeach; ?>
   <?php endif; ?>
   </div> <!-- Close div -->
-
   </div> <!-- Close div: faq-qa / faq-qa-hide -->
-
 </div> <!-- Close div: faq-category-group -->
