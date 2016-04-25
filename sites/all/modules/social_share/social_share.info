@@ -1,0 +1,13 @@
+name = Social Share
+description = "Adds configurable social network share links to nodes."
+core = 7.x
+configure = admin/config/content/social-share
+
+dependencies[] = token
+
+; Information added by Drupal.org packaging script on 2016-04-11
+version = "7.x-2.2"
+core = "7.x"
+project = "social_share"
+datestamp = "1460377440"
+
