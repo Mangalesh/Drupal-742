@@ -78,7 +78,7 @@
 		<div class="section-1 clearfix">
         	<div class="page">
             	<div class="col1">
-					<?php if ($logo): ?>
+			<?php if ($logo): ?>
                         <a href="<?php print $front_page; ?>" title="<?php print t('click Home'); ?>" rel="home" id="logo">
                             <!-- <img src="<?php //print $logo; ?>" alt="<?php //print t('Home'); ?>" /> -->
                         </a>
@@ -89,7 +89,7 @@
                           <?php if ($site_name): ?>
                             <?php if ($title): ?>
                               <div id="site-name">
-                                <strong><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a></strong>
+                                <strong><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name . " - Mangalesh"; ?></span></a></strong>
                               </div><!-- /#site-name -->
                             <?php else: /* Use h1 when the content title is empty */ ?>
                               <h1 id="site-name">
