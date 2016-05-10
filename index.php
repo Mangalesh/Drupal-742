@@ -18,6 +18,8 @@ error_reporting(0);
  */
 define('DRUPAL_ROOT', getcwd());
 
+sleep(2);
+
 require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 menu_execute_active_handler();
